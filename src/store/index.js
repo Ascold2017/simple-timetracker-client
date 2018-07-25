@@ -185,6 +185,7 @@ export default new Vuex.Store({
         },
 
         getUserStat (ctx, userId) {
+             // if userId is null - api use token for find
             return Api.getStatByUser(userId, ctx.state.token)
             .then(result => ctx.commit('setUserStat', result))
             .catch(e => {

@@ -76,7 +76,14 @@ export function createTask (task, token) {
 }
 
 export function getStatByUser (userId, token) {
-    return request.get('/api/getTimetrackerStat/' + userId, { headers: { token }})
-    .then(response)
-    .catch(err)
+    if (!userId) {
+        return request.get('/api/getTimetrackerStat', { headers: { token }})
+        .then(response)
+        .catch(err)
+    } else {
+        return request.get('/api/getTimetrackerStat/' + userId, { headers: { token }})
+        .then(response)
+        .catch(err)
+    }
+    
 }

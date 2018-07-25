@@ -11,9 +11,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "fs": "0.0.1-security",
+    "moment": "^2.22.2",
     "socket.io": "^2.1.1",
     "uws": "^10.148.1",
     "vue": "^2.5.3",
+    "vue-moment": "^4.0.0",
     "vue-router": "^3.0.1",
     "vue-socket.io": "^2.1.1-b",
     "vue-socket.io-extended": "^3.0.0",
